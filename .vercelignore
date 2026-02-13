@@ -1,0 +1,14 @@
+node_modules
+.git
+.gitignore
+*.md
+test.js
+test-conflicts-only.js
+test.bat
+test.sh
+.env.local
+.env.*.local
+*.log
+.DS_Store
+frontend/node_modules
+backend/node_modules

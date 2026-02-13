@@ -1,17 +1,17 @@
 .event-card {
-  border: 1.5px solid #3b82f6;
+  border: 1.5px solid #12263a;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
-  background: rgba(15, 23, 42, 0.8);
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.1), inset 0 0 15px rgba(59, 130, 246, 0.02);
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(18, 38, 58, 0.08), inset 0 0 15px rgba(212, 175, 55, 0.01);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
 .event-card:hover {
-  border-color: #0ea5e9;
-  box-shadow: 0 0 25px rgba(14, 165, 233, 0.2), inset 0 0 15px rgba(14, 165, 233, 0.05);
+  border-color: #d4af37;
+  box-shadow: 0 6px 25px rgba(18, 38, 58, 0.12), inset 0 0 15px rgba(212, 175, 55, 0.05);
   transform: translateY(-2px);
 }
 
@@ -20,14 +20,14 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
-  border-bottom: 1px solid #3b82f6;
+  border-bottom: 1px solid #12263a;
   padding-bottom: 12px;
 }
 
 .event-header h3 {
   margin: 0;
   font-size: 18px;
-  color: #0ea5e9;
+  color: #d4af37;
   font-weight: 700;
 }
 
@@ -40,44 +40,47 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 10px rgba(18, 38, 58, 0.2);
 }
 
 .status-badge {
-  background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+  background: linear-gradient(135deg, #12263a, #1a3a52);
   color: white;
 }
 
 .status-badge[data-status="DRAFT"],
 .status-badge[data-status="draft"] {
-  background: linear-gradient(135deg, #6b7280, #9ca3af);
+  background: linear-gradient(135deg, #757575, #9e9e9e);
   color: white;
-  box-shadow: 0 0 10px rgba(107, 114, 128, 0.3);
+  box-shadow: 0 4px 10px rgba(117, 117, 117, 0.2);
 }
 
 .status-badge[data-status="SUBMITTED"],
 .status-badge[data-status="submitted"] {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+  background: linear-gradient(135deg, #12263a, #1a3a52);
+  color: white;
+  box-shadow: 0 4px 10px rgba(18, 38, 58, 0.2);
 }
 
 .status-badge[data-status="REJECTED"],
 .status-badge[data-status="rejected"] {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-  box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+  background: linear-gradient(135deg, #d32f2f, #f44336);
+  color: white;
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.2);
 }
 
 .status-badge[data-status="RUNNING"],
 .status-badge[data-status="running"] {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, #2e7d32, #558b2f);
   color: white;
-  box-shadow: 0 0 10px rgba(5, 150, 105, 0.3);
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
 }
 
 .status-badge[data-status="COMPLETED"],
 .status-badge[data-status="completed"] {
-  background: linear-gradient(135deg, #f97316, #ea580c);
-  box-shadow: 0 0 10px rgba(234, 88, 12, 0.3);
+  background: linear-gradient(135deg, #f57c00, #ff9800);
+  color: white;
+  box-shadow: 0 4px 10px rgba(245, 124, 0, 0.2);
 }
 
 .event-details {
@@ -86,28 +89,28 @@
 
 .event-details p {
   margin: 8px 0;
-  color: #c7d2fe;
+  color: #2c3e50;
   font-size: 14px;
   line-height: 1.5;
 }
 
 .event-details p strong {
-  color: #0ea5e9;
+  color: #12263a;
 }
 
 .resources {
   margin-top: 12px;
-  background: rgba(59, 130, 246, 0.05);
-  border: 1px solid #3b82f6;
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid #12263a;
   padding: 10px;
   border-radius: 4px;
-  box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.02);
+  box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.02);
 }
 
 .resources strong {
   display: block;
   margin-bottom: 8px;
-  color: #3b82f6;
+  color: #12263a;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -121,23 +124,23 @@
 .resources li {
   margin: 6px 0;
   font-size: 14px;
-  color: #c7d2fe;
+  color: #2c3e50;
 }
 
 .rejection-reason {
   margin-top: 12px;
   padding: 12px;
-  background: rgba(239, 68, 68, 0.08);
-  border-left: 4px solid #ef4444;
-  border: 1px solid #ef4444;
-  color: #fca5a5;
+  background: rgba(211, 47, 47, 0.05);
+  border-left: 4px solid #d32f2f;
+  border: 1px solid #d32f2f;
+  color: #d32f2f;
   font-size: 14px;
   border-radius: 4px;
-  box-shadow: 0 0 10px rgba(239, 68, 68, 0.1);
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.1);
 }
 
 .rejection-reason strong {
-  color: #f87171;
+  color: #b71c1c;
   display: block;
   margin-bottom: 6px;
   text-transform: uppercase;
@@ -164,46 +167,46 @@
 }
 
 .event-actions .btn-primary {
-  background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+  background: linear-gradient(135deg, #12263a, #1a3a52);
   color: white;
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 10px rgba(18, 38, 58, 0.2);
 }
 
 .event-actions .btn-primary:hover {
-  box-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  background: linear-gradient(135deg, #1a3a52, #d4af37);
 }
 
 .event-actions .btn-success {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, #2e7d32, #558b2f);
   color: white;
-  box-shadow: 0 0 10px rgba(5, 150, 105, 0.3);
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
 }
 
 .event-actions .btn-success:hover {
-  box-shadow: 0 0 20px rgba(5, 150, 105, 0.5);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
   transform: translateY(-2px);
 }
 
 .event-actions .btn-danger {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
+  background: linear-gradient(135deg, #d32f2f, #f44336);
   color: white;
-  box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.2);
 }
 
 .event-actions .btn-danger:hover {
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+  box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
   transform: translateY(-2px);
 }
 
 .event-actions .btn-warning {
-  background: linear-gradient(135deg, #f97316, #ea580c);
+  background: linear-gradient(135deg, #f57c00, #ff9800);
   color: white;
-  box-shadow: 0 0 10px rgba(234, 88, 12, 0.3);
+  box-shadow: 0 4px 10px rgba(245, 124, 0, 0.2);
 }
 
 .event-actions .btn-warning:hover {
-  box-shadow: 0 0 20px rgba(234, 88, 12, 0.5);
+  box-shadow: 0 6px 20px rgba(245, 124, 0, 0.4);
   transform: translateY(-2px);
 }

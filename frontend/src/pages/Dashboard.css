@@ -3,21 +3,30 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background: #f5f5f5;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
 }
 
 .dashboard-header {
-  background: #2c3e50;
-  color: white;
+  background: linear-gradient(90deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 255, 136, 0.05) 100%);
+  border-bottom: 2px solid #00ffff;
+  color: #e0e0e0;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .dashboard-header h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 28px;
+  background: linear-gradient(135deg, #00ffff, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  font-weight: 700;
 }
 
 .user-info {
@@ -27,30 +36,38 @@
 }
 
 .user-info span {
-  font-weight: 500;
+  font-weight: 600;
+  color: #00ff88;
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
 }
 
 .btn-logout {
-  background: #e74c3c;
+  background: linear-gradient(135deg, #ff0066, #ff3366);
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 102, 0.2);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .btn-logout:hover {
-  background: #c0392b;
+  box-shadow: 0 0 20px rgba(255, 0, 102, 0.5);
+  transform: translateY(-2px);
 }
 
 .dashboard-nav {
-  background: white;
+  background: rgba(15, 20, 50, 0.6);
   padding: 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #00ffff;
   display: flex;
   flex-wrap: wrap;
+  backdrop-filter: blur(10px);
 }
 
 .dashboard-nav button {
@@ -60,18 +77,21 @@
   border-bottom: 3px solid transparent;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 500;
-  color: #666;
-  transition: all 0.3s;
+  font-weight: 600;
+  color: rgba(224, 224, 224, 0.6);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .dashboard-nav button:hover {
-  color: #333;
+  color: #00ffff;
 }
 
 .dashboard-nav button.active {
-  color: #2196F3;
-  border-bottom-color: #2196F3;
+  color: #00ff88;
+  border-bottom-color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
 }
 
 .dashboard-content {
@@ -82,108 +102,154 @@
 }
 
 .dashboard-content h2 {
-  color: #333;
+  color: #00ff88;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  font-size: 24px;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: neon-glow 3s ease-in-out infinite;
 }
 
 .error-message {
-  background: #ffebee;
-  color: #c62828;
-  padding: 12px;
+  background: rgba(255, 0, 102, 0.1);
+  color: #ff3366;
+  padding: 14px;
   border-radius: 4px;
-  margin-bottom: 16px;
-  border-left: 4px solid #f44336;
+  margin-bottom: 20px;
+  border: 1px solid #ff0066;
+  border-left: 4px solid #ff0066;
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.2);
 }
 
 .create-event-form {
-  background: white;
+  background: rgba(15, 20, 50, 0.8);
+  border: 1.5px solid #00ffff;
   padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1), inset 0 0 20px rgba(0, 255, 136, 0.02);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.create-event-form:hover {
+  border-color: #00ff88;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.2), inset 0 0 20px rgba(0, 255, 136, 0.05);
 }
 
 .create-event-form h2 {
   margin-top: 0;
+  color: #00ff88;
 }
 
 .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 6px;
-  color: #333;
-  font-weight: 500;
+  margin-bottom: 8px;
+  color: #00ff88;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 12px;
+  border: 1.5px solid #00ffff;
   border-radius: 4px;
   font-size: 14px;
   font-family: inherit;
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(224, 224, 224, 0.3);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #2196F3;
-  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.05);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 .resources-section {
   margin: 24px 0;
   padding: 16px;
-  background: #f9f9f9;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid #00ffff;
   border-radius: 4px;
+  box-shadow: inset 0 0 10px rgba(0, 255, 136, 0.05);
 }
 
 .resources-section h3 {
   margin-top: 0;
-  color: #333;
+  color: #00ffff;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
 }
 
 .resource-row {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   margin-bottom: 12px;
 }
 
 .resource-row select,
 .resource-row input {
   flex: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
+  padding: 10px;
+  border: 1.5px solid #00ffff;
   border-radius: 4px;
   font-size: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  transition: all 0.3s ease;
 }
 
 .resource-row input {
   flex: 0.2;
 }
 
+.resource-row select:focus,
+.resource-row input:focus {
+  border-color: #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  background: rgba(0, 255, 136, 0.05);
+}
+
 .btn-submit {
   width: 100%;
-  padding: 12px;
-  background: #4CAF50;
-  color: white;
+  padding: 14px;
+  background: linear-gradient(135deg, #00ffff, #00ff88);
+  color: #0a0e27;
   border: none;
   border-radius: 4px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn-submit:hover:not(:disabled) {
-  background: #45a049;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.6), 0 0 40px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .btn-submit:disabled {
@@ -196,77 +262,102 @@
 .btn-danger,
 .btn-warning,
 .btn-cancel {
-  padding: 8px 16px;
+  padding: 10px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
   margin-right: 8px;
   margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .btn-primary {
-  background: #2196F3;
-  color: white;
+  background: linear-gradient(135deg, #00ffff, #00ff88);
+  color: #0a0e27;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
 }
 
 .btn-primary:hover {
-  background: #1976D2;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  transform: translateY(-2px);
 }
 
 .btn-success {
-  background: #4CAF50;
-  color: white;
+  background: linear-gradient(135deg, #00ff88, #00ffaa);
+  color: #0a0e27;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
 }
 
 .btn-success:hover {
-  background: #45a049;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  transform: translateY(-2px);
 }
 
 .btn-danger {
-  background: #F44336;
+  background: linear-gradient(135deg, #ff0066, #ff3366);
   color: white;
+  box-shadow: 0 0 10px rgba(255, 0, 102, 0.3);
 }
 
 .btn-danger:hover {
-  background: #d32f2f;
+  box-shadow: 0 0 20px rgba(255, 0, 102, 0.5);
+  transform: translateY(-2px);
 }
 
 .btn-warning {
-  background: #FF9800;
+  background: linear-gradient(135deg, #ffaa00, #ff6600);
   color: white;
+  box-shadow: 0 0 10px rgba(255, 170, 0, 0.3);
 }
 
 .btn-warning:hover {
-  background: #f57c00;
+  box-shadow: 0 0 20px rgba(255, 170, 0, 0.5);
+  transform: translateY(-2px);
 }
 
 .btn-cancel {
-  background: #999;
-  color: white;
+  background: rgba(224, 224, 224, 0.1);
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
 }
 
 .btn-cancel:hover {
-  background: #777;
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .reject-form {
   margin-top: 12px;
-  padding: 12px;
-  background: #fff3e0;
+  padding: 14px;
+  background: rgba(255, 0, 102, 0.08);
   border-radius: 4px;
+  border: 1px solid #ff0066;
 }
 
 .reject-form textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ffc107;
+  padding: 12px;
+  border: 1.5px solid #ff0066;
   border-radius: 4px;
   font-size: 14px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   box-sizing: border-box;
-  min-height: 60px;
+  min-height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.reject-form textarea:focus {
+  outline: none;
+  border-color: #ff3366;
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.3);
 }
 
 .admin-panel {
@@ -276,15 +367,24 @@
 }
 
 .admin-section {
-  background: white;
+  background: rgba(15, 20, 50, 0.8);
+  border: 1.5px solid #00ffff;
   padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1), inset 0 0 20px rgba(0, 255, 136, 0.02);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.admin-section:hover {
+  border-color: #00ff88;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.2), inset 0 0 20px rgba(0, 255, 136, 0.05);
 }
 
 .admin-section h2 {
   margin-top: 0;
-  color: #333;
+  color: #00ff88;
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
 }
 
 .admin-section form {
@@ -294,23 +394,47 @@
 }
 
 .admin-section input {
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 12px;
+  border: 1.5px solid #00ffff;
   border-radius: 4px;
   font-size: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.admin-section input:focus {
+  outline: none;
+  border-color: #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  background: rgba(0, 255, 136, 0.05);
 }
 
 .admin-section button {
-  padding: 10px;
-  background: #2196F3;
-  color: white;
+  padding: 12px;
+  background: linear-gradient(135deg, #00ffff, #00ff88);
+  color: #0a0e27;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .admin-section button:hover {
-  background: #1976D2;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Neon glow animation */
+@keyframes neon-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+  }
 }

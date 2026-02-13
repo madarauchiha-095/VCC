@@ -5,12 +5,6 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "rewrites": [
-    {
-      "source": "/api/:match*",
-      "destination": "/api/:match*"
-    }
-  ],
   "routes": [
     {
       "src": "/api/(.*)",
